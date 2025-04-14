@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 class BankAccount{
 	int balance = 1000;
 
@@ -40,4 +41,46 @@ public class BankAccountMain{
 }
 
 
+=======
+
+ class BankAccount {
+  
+    int balance;
+    public BankAccount() {
+        balance = 1000;
+    }
+
+   
+    public void deposit(int amount) {
+        balance += amount;
+        System.out.println("Deposited: ₹" + amount);
+    }
+
+  
+    public void withdraw(int amount) {
+        if (balance >= amount) {
+            balance -= amount;
+            System.out.println("Withdrawn: ₹" + amount);
+        } else {
+            System.out.println("Error: Insufficient balance.");
+        }
+    }
+
+
+    public void checkBalance() {
+        System.out.println("Current balance: ₹" + balance);
+    }
+}
+
+public class BankAccountMain {
+    public static void main(String[] args) {
+              BankAccount account = new BankAccount();
+        account.deposit(500);
+
+             account.withdraw(300);
+
+       
+        account.checkBalance();
+    }
+>>>>>>> 7db4aa4 (java programs)
 }
