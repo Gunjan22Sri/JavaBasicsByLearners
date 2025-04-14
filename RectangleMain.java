@@ -1,10 +1,27 @@
-public class RectangleMain{
+class Rectangle {
+    
+ double length;
+ double breadth;
 
-	public static void main(String[] args){
+    
+  Rectangle(double length, double breadth) {
+        this.length = length;
+        this.breadth = breadth;
+    }
 
-		Rectangle rect = new Rectangle(7, 5);
+    
+   void area() {
+        double area = length * breadth;
+        System.out.println("Area of the rectangle is: " + area);
+    }
+}
 
-		rect.area();
+class RectangleMain {
+    public static void main(String[] args) {
+        
+        Rectangle rect = new Rectangle(10, 5);
 
-	}
+        
+        rect.area();
+    }
 }
