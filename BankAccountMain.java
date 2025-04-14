@@ -1,10 +1,36 @@
-public class BankAccountMain {
-    public static void main(String[] args) {
-        BankAccount myAccount = new BankAccount();
-        myAccount.deposit(500);
+class BankAccount{
+	int balance = 1000;
 
-        myAccount.withdraw(300);
+public void deposit(int amount){
+	
+		balance = balance + amount;
+		System.out.println("Amount Deposited: " + amount);
+	}
+public void withdraw(int amount){
+	if(amount <= balance){
+		balance -= amount;
+		System.out.println("Withdrawn amount: "+ amount);
+		
+}else{
+	System.out.println("Insufficient balance for withdraw");
+}
+}
 
-        myAccount.checkBalance();
-    }
+public void checkBalance(){
+	System.out.println("Current Balance: " + balance);
+}
+}
+
+public class BankAccountMain{
+	public static void main(String args[]){
+		BankAccount bank = new BankAccount();
+		
+		bank.deposit(500);
+		bank.withdraw(300);
+		bank.checkBalance();
+
+
+}
+
+
 }
