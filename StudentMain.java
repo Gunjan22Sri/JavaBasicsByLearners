@@ -16,7 +16,7 @@ class Student {
 public class StudentMain {
     public static void main(String[] args) {
         Student obj = new Student();     
-        obj.setDetails("Pavan", 23);
-        obj.display();                   
-    }
+        obj.setDetails("Priyanka", 23);
+        obj.display();                   
+    }
 }

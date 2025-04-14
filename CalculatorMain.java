@@ -25,10 +25,10 @@ class CalculatorMain{
 	public static void main(String args[]){
 	
 		Calculator cal = new Calculator();
-		int addition = cal.add(26, 15);
-		int subtraction = cal.subtract(52, 15);
-		int multiplication = cal.multiply(36, 45);
-		double division = cal.divide(10, 5);
+		int addition = cal.add(22, 10);
+		int subtraction = cal.subtract(20, 15);
+		int multiplication = cal.multiply(3, 4);
+		double division = cal.divide(5, 3);
 	
 
 		System.out.println(addition);

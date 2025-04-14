@@ -3,11 +3,10 @@ class Rectangle{
    int breadth;
 
 
- public Rectangle(int l, int b){
+  Rectangle(int l, int b){
   length = l;
   breadth = b;
   }
-
 
   void area(){
   System.out.println("Area of rectangle is :" + length*breadth);
@@ -17,11 +16,7 @@ class Rectangle{
 
 class RectangleMain{
  public static void main(String a[]){
-
-
-  Rectangle obj = new Rectangle(6,5);
-
-
+  Rectangle obj = new Rectangle(25,5);
   obj.area();
 }
 }
