@@ -1,24 +1,22 @@
-class Student{
-   String name;
-   int age;
- 
-   void setDetails(String name, int age){
-   this.name=name;
-   this.age=age;
-   }
- 
-   void display() {
-     System.out.println("Name="+name);
-     System.out.println("Age="+age);
- 
+class Student {
+    String name;
+    int age;
+
+    public void setDetails(String name, int age) {
+        this.name = name;
+        this.age = age;
+    }
+
+    public void display() {
+        System.out.println("Name:" + name);
+        System.out.println("Age:" + age);
     }
 }
- 
- 
-class StudentMain{
-   public static void main(String a[]){
-      Student student=new Student();
-      student.setDetails("Khushi",22);
-      student.display();
-   }
+
+public class StudentMain {
+    public static void main(String[] args) {
+        Student obj = new Student();     
+        obj.setDetails("Pavan", 23);
+        obj.display();                   
+    }
 }
