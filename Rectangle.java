@@ -1,17 +1,14 @@
-public class Rectangle{
+public class Rectangle {
+    int length;
+    int breadth;
 
-	int length;
-	int breadth;
+    public Rectangle(int len, int brea) {
+        length = len;
+        breadth = brea;
+    }
 
-	public Rectangle(int length, int breadth){
-		this.length = length;
-		this.breadth = breadth;
-	}
-
-	public void area(){
-		int result = length * breadth;
-		System.out.println("Area of rectangle: " + result);
-	
-	}
-
+    public void area() {
+        int result = length * breadth;
+        System.out.println("Area of the rectangle: " + result);
+    }
 }
