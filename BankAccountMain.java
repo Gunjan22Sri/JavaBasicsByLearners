@@ -1,86 +1,34 @@
-<<<<<<< HEAD
-class BankAccount{
-	int balance = 1000;
+class BankAccount {
+    private int balance = 1000;
+    private int amount = 0;
 
-public void deposit(int amount){
-	if(amount > 0){
-		balance = balance + amount;
-		System.out.println("Amount Deposited: " + amount);
-	}else{
-		System.out.println("Invalid amount deposited");		
-}
-	}
-public void withdraw(int amount){
-	if(amount <= balance){
-		balance -= amount;
-		System.out.println("Withdrawn amount: "+ amount);
-		
-}else{
-	System.out.println("Insufficient balance for withdraw");
-}
-
-
-}
-
-public void checkBalance(){
-
-	System.out.println("Current Balance: " + balance);
-}
-
-}
-
-public class BankAccountMain{
-	public static void main(String args[]){
-		BankAccount bank = new BankAccount();
-		
-		bank.deposit(500);
-		bank.withdraw(300);
-		bank.checkBalance();
-
-
-}
-
-
-=======
-
- class BankAccount {
-  
-    int balance;
-    public BankAccount() {
-        balance = 1000;
-    }
-
-   
     public void deposit(int amount) {
-        balance += amount;
-        System.out.println("Deposited: ₹" + amount);
+        if (amount > 0)
+            System.out.println("Deposited: $" + (balance += amount));
+        else
+            System.out.println("Invalid deposit amount.");
     }
 
-  
     public void withdraw(int amount) {
-        if (balance >= amount) {
-            balance -= amount;
-            System.out.println("Withdrawn: ₹" + amount);
-        } else {
-            System.out.println("Error: Insufficient balance.");
+        if (amount <= balance)
+        {
+            this.amount = amount;
+            System.out.println("Withdrawn: $" + (this.amount));
         }
+        else
+            System.out.println("Insufficient balance.");
     }
-
 
     public void checkBalance() {
-        System.out.println("Current balance: ₹" + balance);
+        System.out.println("Current balance: $" + (balance - amount));
     }
 }
 
 public class BankAccountMain {
     public static void main(String[] args) {
-              BankAccount account = new BankAccount();
-        account.deposit(500);
-
-             account.withdraw(300);
-
-       
+        BankAccount account = new BankAccount();
+        account.deposit(345);
+        account.withdraw(1);
         account.checkBalance();
     }
->>>>>>> 7db4aa4 (java programs)
 }
