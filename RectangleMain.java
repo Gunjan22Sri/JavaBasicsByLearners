@@ -1,27 +1,21 @@
 class Rectangle {
-    
- double length;
- double breadth;
+    int length;
+    int breadth;
 
-    
-  Rectangle(double length, double breadth) {
-        this.length = length;
-        this.breadth = breadth;
+        Rectangle(int l, int b) {
+        length = l;
+        breadth = b;
     }
 
-    
-   void area() {
-        double area = length * breadth;
-        System.out.println("Area of the rectangle is: " + area);
+        void area() {
+        int result = length * breadth; 
+        System.out.println("Area of rectangle: " + result);
     }
 }
 
-class RectangleMain {
-    public static void main(String[] args) {
-        
-        Rectangle rect = new Rectangle(10, 5);
-
-        
-        rect.area();
+public class RectangleMain {
+    public static void main(String[ ] args) {
+                Rectangle rect1 = new Rectangle(10, 5);
+                rect1.area();
     }
 }
